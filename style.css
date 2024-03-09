@@ -31,15 +31,23 @@ img {
 
 body {
     font-family: "Outfit", sans-serif;
-    background-color: var(--rose-white);
+    background-color: var(--white);
 }
 
-.text-wrap {
+.wrap {
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 75%;
   margin-left: 2rem;
+}
+
+.size-wrap{
+  width: 75%;
+}
+
+.time {
+  background-color: var(--rose-white);
+  border-radius: 1.15rem;
 }
 
 .time h3 {
@@ -52,7 +60,7 @@ body {
 }
 
 h1 {
-  padding-bottom: 1rem;
+  padding-bottom: 1.10rem;
   font-family: "Young Serif";
 }
 
@@ -60,11 +68,12 @@ h2 {
   font-family: "Young Serif";
   color: var(--nutmeg);
   padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.20rem;
 }
 
 p {
   padding-bottom: 1rem;
+  color: var(--wenge-brown);
 }
 
 ul,
@@ -74,6 +83,7 @@ table,
 td,
 tr {
   margin-left: 2rem;
+  padding-bottom: 0.75rem;
 }
 
 .spannit {
@@ -85,24 +95,94 @@ tr {
 }
 
 .colortext {
-  color: var(--dark-charcoal);
+  color: var(--wenge-brown);
+}
+
+.color-text{
+  color: var(--nutmeg);
+  font-weight: 700;
 }
 
 .colorbullet2 {
   color: var(--nutmeg);
 }
 
-.colortext2 {
-  color: var(--dark-charcoal);
-}
-
-.nutrition-table {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
 td {
-  padding-right: 5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.instructions,
+.nutrition, td {
+  border-top: 1px solid var(--light-grey);
+}
+
+tr:first-child td {
+  border-top: none;
+}
+
+ol > li::marker {
+  font-weight: bold;
+}
+
+.instructions li {
+  padding-left: 1rem;
+}
+
+@media (min-width: 1440px) {
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .centering {
+    width: 50%;
+    height: 85%;
+  }
+
+
+  body {
+    background-color: var(--eggshell);
+}
+
+  .wrap {
+    background-color: var(--white);
+    width: 100%;
+    padding-left: 4rem;
+    border-radius: 1rem;
+}
+
+  .size-wrap{
+    width: 90%;
+  }
+
+  img {
+    padding-top: 2rem;
+    max-width: 90%;
+    border-radius: 4rem;
+}
+
+table {
+  width: 100%;
+}
+
+}
+
+@media (max-width: 375px){
+  .wrap{
+    width: 100%;
+    margin-left: 0rem;
+  }
+
+  .size-wrap{
+    margin-left: 2rem;
+  }
+
+  img {
+
+    max-width: 100%;
+}
 }
